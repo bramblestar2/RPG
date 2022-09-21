@@ -27,7 +27,7 @@
     <ClCompile Include="Source Files\Entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source Files\Extra.cpp">
+    <ClCompile Include="Source Files\Misc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source Files\Game.cpp">
@@ -55,7 +55,7 @@
     <ClInclude Include="Headers\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\Extra.h">
+    <ClInclude Include="Headers\Misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Game.h">

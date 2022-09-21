@@ -1,21 +1,21 @@
 {
-	"Window": {
-		"Width": 1600,
-		"Height": 900,
-		"Title": "Window",
-		"FPS": 60
-	},
-	"Player": {
-		"Speed": 5,
-		"Size": {
-			"Width": 60,
-			"Height": 60
-		}
-	},
-	"Sprites": {
-		"Hostile": "Entity/Hostile/Textures/",
-		"Passive": "Entity/Passive/Textures/",
-		"NPC": "Entity/NPC/Textures/",
-		"Player": "Player/Textures/"
-	}
+  "Player": {
+    "Size": {
+      "Height": 60,
+      "Width": 60
+    },
+    "Speed": 5
+  },
+  "Sprites": {
+    "Hostile": "Entity/Hostile/Textures/",
+    "NPC": "Entity/NPC/Textures/",
+    "Passive": "Entity/Passive/Textures/",
+    "Player": "Player/Textures/"
+  },
+  "Window": {
+    "FPS": 60,
+    "Height": 900,
+    "Title": "Window",
+    "Width": 1600
+  }
 }

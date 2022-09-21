@@ -1,6 +1,6 @@
 #include "../Headers/Player.h"
 #include "../Dependencies/json.hpp"
-#include "../Headers/Extra.h"
+#include "../Headers/Misc.h"
 #include <iostream>
 #include <fstream>
 
@@ -81,35 +81,35 @@ void Player::movement()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
 		if (velocity.y > -maxSpeed)
-			velocity.y = Extra::lerp(velocity.y, -maxSpeed, speedUp);
+			velocity.y = Misc::lerp(velocity.y, -maxSpeed, speedUp);
 	}
 	//Down
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{
 		if (velocity.y < maxSpeed)
-			velocity.y = Extra::lerp(velocity.y, maxSpeed, speedUp);
+			velocity.y = Misc::lerp(velocity.y, maxSpeed, speedUp);
 	}
 	else
 	{
 		if (velocity.y != 0)
-			velocity.y = Extra::lerp(velocity.y, 0, slowDown);
+			velocity.y = Misc::lerp(velocity.y, 0, slowDown);
 	}
 	//Left
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
 		if (velocity.x > -maxSpeed)
-			velocity.x = Extra::lerp(velocity.x, -maxSpeed, speedUp);
+			velocity.x = Misc::lerp(velocity.x, -maxSpeed, speedUp);
 	}
 	//Right
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 	{
 		if (velocity.x < maxSpeed)
-			velocity.x = Extra::lerp(velocity.x, maxSpeed, speedUp);
+			velocity.x = Misc::lerp(velocity.x, maxSpeed, speedUp);
 	}
 	//No keys held - Slow down to a stop
 	else
 	{
 		if (velocity.x != 0)
-			velocity.x = Extra::lerp(velocity.x, 0, slowDown);
+			velocity.x = Misc::lerp(velocity.x, 0, slowDown);
 	}
 }

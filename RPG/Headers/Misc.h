@@ -1,5 +1,5 @@
 #pragma once
-namespace Extra
+namespace Misc
 {
 	float lerp(float a, float b, float t);
 }

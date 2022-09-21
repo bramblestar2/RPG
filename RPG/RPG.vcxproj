@@ -148,7 +148,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source Files\Enemy.cpp" />
     <ClCompile Include="Source Files\Entity.cpp" />
-    <ClCompile Include="Source Files\Extra.cpp" />
+    <ClCompile Include="Source Files\Misc.cpp" />
     <ClCompile Include="Source Files\Game.cpp" />
     <ClCompile Include="Source Files\Hitbox.cpp" />
     <ClCompile Include="Source Files\Perspective.cpp" />
@@ -161,7 +161,7 @@
     <ClInclude Include="Dependencies\json.hpp" />
     <ClInclude Include="Headers\Enemy.h" />
     <ClInclude Include="Headers\Entity.h" />
-    <ClInclude Include="Headers\Extra.h" />
+    <ClInclude Include="Headers\Misc.h" />
     <ClInclude Include="Headers\Game.h" />
     <ClInclude Include="Headers\Hitbox.h" />
     <ClInclude Include="Headers\Perspective.h" />

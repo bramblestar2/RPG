@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include "../Dependencies/json.hpp"
-#include "../Headers/Extra.h"
+#include "../Headers/Misc.h"
 
 using json = nlohmann::json;
 
@@ -60,8 +60,8 @@ void Perspective::followEntity(bool isFollowing)
 
 void Perspective::follow(sf::FloatRect a, sf::RenderWindow& window)
 {
-	int x = Extra::lerp(views.at(selectedView).getCenter().x, a.left+(a.width/2), lerpSpeed);
-	int y = Extra::lerp(views.at(selectedView).getCenter().y, a.top + (a.height / 2), lerpSpeed);;
+	int x = Misc::lerp(views.at(selectedView).getCenter().x, a.left+(a.width/2), lerpSpeed);
+	int y = Misc::lerp(views.at(selectedView).getCenter().y, a.top + (a.height / 2), lerpSpeed);;
 	views.at(selectedView).setCenter(x, y);
 
 	window.setView(views.at(selectedView));
