@@ -55,7 +55,11 @@
 *          and check collision with entities and walls)
 *   • Inventory (Includes hotbar and character screen)
 *   • Item (Includes weapon and items *CONSUMABLES*)
-*   • GameStates (This will be for main menu, game over, and maybe a few more)
+*   • MainMenu
+*   • GameOver
+*   • SettingsMenu
+*   • Editor
+*   • 
 *
 *   If lighting/post processing is added
 *   • LightSource

@@ -75,7 +75,7 @@ void Player::movement()
 {
 	//Transition speeds
 	float speedUp = 0.4f;
-	float slowDown = 0.2f;
+	float slowDown = 0.3f;
 
 	//Up
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))

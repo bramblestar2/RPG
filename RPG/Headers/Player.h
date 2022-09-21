@@ -23,8 +23,8 @@ private:
 	sf::Texture t;
 
 	Hitbox hitbox;
-	bool showHitbox;
 
+	bool showHitbox;
 	float maxSpeed;
 
 	//The location of the sprites
