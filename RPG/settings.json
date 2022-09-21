@@ -1,0 +1,21 @@
+{
+	"Window": {
+		"Width": 1600,
+		"Height": 900,
+		"Title": "Window",
+		"FPS": 60
+	},
+	"Player": {
+		"Speed": 5,
+		"Size": {
+			"Width": 60,
+			"Height": 60
+		}
+	},
+	"Sprites": {
+		"Hostile": "Entity/Hostile/Textures/",
+		"Passive": "Entity/Passive/Textures/",
+		"NPC": "Entity/NPC/Textures/",
+		"Player": "Player/Textures/"
+	}
+}
