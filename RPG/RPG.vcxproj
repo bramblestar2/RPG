@@ -117,12 +117,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,27 +145,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="Extra.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Hitbox.cpp" />
-    <ClCompile Include="Perspective.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SFML Window.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Dependencies\json.hpp" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="Entity.h" />
-    <ClInclude Include="Extra.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Hitbox.h" />
-    <ClInclude Include="Perspective.h" />
-    <ClInclude Include="Player.h" />
+    <ClCompile Include="Source Files\Enemy.cpp" />
+    <ClCompile Include="Source Files\Entity.cpp" />
+    <ClCompile Include="Source Files\Extra.cpp" />
+    <ClCompile Include="Source Files\Game.cpp" />
+    <ClCompile Include="Source Files\Hitbox.cpp" />
+    <ClCompile Include="Source Files\Perspective.cpp" />
+    <ClCompile Include="Source Files\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\json.hpp" />
+    <ClInclude Include="Headers\Enemy.h" />
+    <ClInclude Include="Headers\Entity.h" />
+    <ClInclude Include="Headers\Extra.h" />
+    <ClInclude Include="Headers\Game.h" />
+    <ClInclude Include="Headers\Hitbox.h" />
+    <ClInclude Include="Headers\Perspective.h" />
+    <ClInclude Include="Headers\Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

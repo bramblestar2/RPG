@@ -1,4 +1,4 @@
-#include "Hitbox.h"
+#include "../Headers/Hitbox.h"
 
 Hitbox::Hitbox(sf::FloatRect a)
 {

@@ -6,7 +6,7 @@
 		"FPS": 60
 	},
 	"Player": {
-		"Speed": 5,
+		"Speed": 2,
 		"Size": {
 			"Width": 60,
 			"Height": 60

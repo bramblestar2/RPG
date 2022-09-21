@@ -1,7 +1,7 @@
-#include "Game.h"
+#include "../Headers/Game.h"
 #include <fstream>
 #include <iostream>
-#include "Dependencies/json.hpp"
+#include "../Dependencies/json.hpp"
 
 using json = nlohmann::json;
 
@@ -42,8 +42,11 @@ void Game::render()
 
 void Game::update()
 {
-	//views.follow(player.getGlobalBounds(), *window);
-	player.update(dt);
+	if (window->hasFocus())
+	{
+		//views.follow(player.getGlobalBounds(), *window);
+		player.update(dt);
+	}
 }
 
 void Game::updateDt()

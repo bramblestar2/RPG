@@ -1,6 +1,6 @@
-#include "Player.h"
-#include "Dependencies/json.hpp"
-#include "Extra.h"
+#include "../Headers/Player.h"
+#include "../Dependencies/json.hpp"
+#include "../Headers/Extra.h"
 #include <iostream>
 #include <fstream>
 

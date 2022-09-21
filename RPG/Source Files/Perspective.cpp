@@ -1,8 +1,8 @@
-#include "Perspective.h"
+#include "../Headers/Perspective.h"
 #include <iostream>
 #include <fstream>
-#include "Dependencies/json.hpp"
-#include "Extra.h"
+#include "../Dependencies/json.hpp"
+#include "../Headers/Extra.h"
 
 using json = nlohmann::json;
 
