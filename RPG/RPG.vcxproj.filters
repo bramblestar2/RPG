@@ -19,33 +19,36 @@
     <Filter Include="Resource Files\Levels">
       <UniqueIdentifier>{370cc578-bc86-4030-a652-8b48008f19c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Game Elements">
+      <UniqueIdentifier>{5d965cbf-54e0-465f-a39a-9fe9ee3183ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source Files\Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Misc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Hitbox.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Source Files\Player.cpp">
+      <Filter>Source Files\Game Elements</Filter>
     </ClCompile>
     <ClCompile Include="Source Files\Perspective.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Player.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game Elements</Filter>
     </ClCompile>
     <ClCompile Include="Source Files\Map.cpp">
+      <Filter>Source Files\Game Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Hitbox.cpp">
+      <Filter>Source Files\Game Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Game.cpp">
+      <Filter>Source Files\Game Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Entity.cpp">
+      <Filter>Source Files\Game Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Enemy.cpp">
+      <Filter>Source Files\Game Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Misc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
