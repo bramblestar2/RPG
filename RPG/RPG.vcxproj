@@ -148,6 +148,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source Files\Enemy.cpp" />
     <ClCompile Include="Source Files\Entity.cpp" />
+    <ClCompile Include="Source Files\Map.cpp" />
     <ClCompile Include="Source Files\Misc.cpp" />
     <ClCompile Include="Source Files\Game.cpp" />
     <ClCompile Include="Source Files\Hitbox.cpp" />
@@ -155,17 +156,20 @@
     <ClCompile Include="Source Files\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="settings.json" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Dependencies\json.hpp" />
     <ClInclude Include="Headers\Enemy.h" />
     <ClInclude Include="Headers\Entity.h" />
+    <ClInclude Include="Headers\Map.h" />
     <ClInclude Include="Headers\Misc.h" />
     <ClInclude Include="Headers\Game.h" />
     <ClInclude Include="Headers\Hitbox.h" />
     <ClInclude Include="Headers\Perspective.h" />
     <ClInclude Include="Headers\Player.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\levelList.json" />
+    <None Include="Files\Levels\Tutorial.json" />
+    <None Include="Files\settings.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

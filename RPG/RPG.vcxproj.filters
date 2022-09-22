@@ -16,6 +16,9 @@
     <Filter Include="Dependencies">
       <UniqueIdentifier>{2f598a96-33b8-4177-a8ef-e79bc91bafe0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Levels">
+      <UniqueIdentifier>{370cc578-bc86-4030-a652-8b48008f19c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -42,11 +45,9 @@
     <ClCompile Include="Source Files\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="settings.json">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClCompile Include="Source Files\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Enemy.h">
@@ -73,5 +74,19 @@
     <ClInclude Include="Dependencies\json.hpp">
       <Filter>Dependencies</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\levelList.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Files\settings.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Files\Levels\Tutorial.json">
+      <Filter>Resource Files\Levels</Filter>
+    </None>
   </ItemGroup>
 </Project>

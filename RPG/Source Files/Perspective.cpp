@@ -22,7 +22,7 @@ void Perspective::init()
 	followingEntity = true;
 	lerpSpeed = 0.5f;
 
-	std::ifstream ifs("settings.json");
+	std::ifstream ifs("Files/settings.json");
 	json info = json::parse(ifs);
 	ifs.close();
 

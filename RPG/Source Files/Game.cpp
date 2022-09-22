@@ -71,11 +71,14 @@ void Game::updateSFMLEvents()
 
 void Game::initWindow()
 {
-	std::ifstream settings("settings.json");
+	std::ifstream settings("Files/settings.json");
 	json info = json::parse(settings);
 	settings.close();
 
 	std::string title = info["Window"]["Title"];
-	window = new sf::RenderWindow(sf::VideoMode(info["Window"]["Width"], info["Window"]["Height"]), title);
+	window = new sf::RenderWindow(sf::VideoMode(
+								  info["Window"]["Width"],
+								  info["Window"]["Height"]),
+								  title);
 	window->setFramerateLimit(info["Window"]["FPS"]);
 }

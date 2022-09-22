@@ -48,18 +48,17 @@
 *   • Player - uses Entity
 *   • Enemy - uses Entity (Enemies will randomly move but will attack players when near)
 *   • Perspective (Will handle views)
-*   
+*   • Map (Will gather all level information, display,
+*          and check collision with entities and walls)
+* 
 *   (NOT STARTED)
 *   • Passive - uses Entity (Passives will randomly move)
-*   • Map (Will gather all level information, display, 
-*          and check collision with entities and walls)
 *   • Inventory (Includes hotbar and character screen)
 *   • Item (Includes weapon and items *CONSUMABLES*)
 *   • MainMenu
 *   • GameOver
 *   • SettingsMenu
 *   • Editor
-*   • 
 *
 *   If lighting/post processing is added
 *   • LightSource

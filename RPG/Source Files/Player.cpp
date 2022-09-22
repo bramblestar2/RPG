@@ -63,7 +63,7 @@ void Player::draw(sf::RenderWindow& window)
 
 void Player::init()
 {
-	std::ifstream ifs("settings.json");
+	std::ifstream ifs("Files/settings.json");
 	json info = json::parse(ifs);
 	ifs.close();
 

@@ -7,6 +7,10 @@ public:
 	Player();
 	~Player();
 
+	//level info, inventory, and player info
+	//will be saved to saves.json
+	void saveInfo();
+
 	sf::FloatRect getGlobalBounds();
 	void setPosition(sf::Vector2f);
 
