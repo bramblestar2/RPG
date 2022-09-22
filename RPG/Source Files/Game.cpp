@@ -35,6 +35,7 @@ void Game::render()
 	window->clear();
 
 	map.draw(*window);
+
 	//Player Renders
 	player.draw(*window);
 
@@ -68,7 +69,7 @@ void Game::updateSFMLEvents()
 		if (event.type == sf::Event::KeyPressed)
 		{
 			player.updateEvents(event);
-			map.updateEvents(event);
+			map.updateEvents(event); 
 		}
 	}
 }

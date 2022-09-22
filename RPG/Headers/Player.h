@@ -34,4 +34,6 @@ private:
 
 	//The location of the sprites
 	std::string spriteFiles;
+
+
 };
