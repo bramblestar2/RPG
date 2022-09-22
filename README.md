@@ -6,7 +6,6 @@ Project started: 9/9/2022
               What the game will have and look like
 Will have-
   (COMPLETED)
-  *TASK* - *COMPLETION DATE, MM/DD/YY*
 
   (WORK IN PROGRESS)
   • Easy Settings (JSON)
@@ -22,8 +21,6 @@ Will have-
 
 Will look like (Gameplay)-
   (COMPLETED)
-  *TASK* - *COMPLETION DATE, MM/DD/YY*
-  • Top down view (Already done anyways)
 
   (WORK IN PROGRESS)
 
