@@ -11,6 +11,7 @@ public:
 	//will be saved to saves.json
 	void saveInfo();
 
+	sf::Vector2f& getVelocity();
 	sf::FloatRect getGlobalBounds();
 	void setPosition(sf::Vector2f);
 

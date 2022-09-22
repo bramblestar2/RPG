@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Player.h"
 #include "Perspective.h"
+#include "Map.h"
 
 class Game
 {
@@ -26,6 +27,7 @@ private:
 
 	// Game stuff
 	Player player;
+	Map map;
 	Perspective views;
 };
 

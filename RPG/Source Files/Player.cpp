@@ -22,6 +22,11 @@ Player::~Player()
 {
 }
 
+sf::Vector2f& Player::getVelocity()
+{
+	return velocity;
+}
+
 sf::FloatRect Player::getGlobalBounds()
 {
 	return sprite.getGlobalBounds();

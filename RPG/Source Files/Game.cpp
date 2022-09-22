@@ -46,6 +46,8 @@ void Game::update()
 	{
 		//views.follow(player.getGlobalBounds(), *window);
 		player.update(dt);
+		map.update(dt);
+		map.getPlayerInfo(player.getHitbox(), player.getVelocity());
 	}
 }
 

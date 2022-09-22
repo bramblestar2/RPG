@@ -48,8 +48,8 @@
 *   • Player - uses Entity
 *   • Enemy - uses Entity (Enemies will randomly move but will attack players when near)
 *   • Perspective (Will handle views)
-*   • Map (Will gather all level information, display,
-*          and check collision with entities and walls)
+*   • Map (Will gather all level information, display game objects,
+*          check collision with entities and walls, and handle all entities)
 * 
 *   (NOT STARTED)
 *   • Passive - uses Entity (Passives will randomly move)

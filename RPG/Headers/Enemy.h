@@ -4,6 +4,7 @@
 class Enemy : public Entity
 {
 public:
+	Enemy(int x, int y);
 	Enemy();
 	~Enemy();
 
@@ -21,5 +22,9 @@ private:
 	sf::Vector2f velocity;
 	sf::RectangleShape sprite;
 	sf::Texture t;
+
+	Hitbox hitbox;
+
+	bool isIdle;
 };
 

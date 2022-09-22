@@ -9,6 +9,16 @@ Entity::~Entity()
 {
 }
 
+sf::FloatRect Entity::getGlobalBounds()
+{
+	return sprite.getGlobalBounds();
+}
+
+sf::FloatRect Entity::getHitbox()
+{
+	return hitbox.getHitBox();
+}
+
 void Entity::updateCollision(sf::FloatRect aHitbox, sf::Vector2f aVelocity)
 {
 	hitbox.collision(aHitbox, aVelocity);
