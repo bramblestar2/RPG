@@ -8,7 +8,7 @@ public:
 	Enemy();
 	~Enemy();
 
-	virtual void update();
+	virtual void update(double);
 	virtual void updateEvents(sf::Event);
 	virtual void draw(sf::RenderWindow& window);
 private:
@@ -26,5 +26,6 @@ private:
 	Hitbox hitbox;
 
 	bool isIdle;
+	bool showHitbox;
 };
 

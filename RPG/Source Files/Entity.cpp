@@ -1,4 +1,5 @@
 #include "../Headers/Entity.h"
+#include <iostream>
 
 Entity::Entity()
 {
@@ -19,7 +20,7 @@ sf::FloatRect Entity::getHitbox()
 	return hitbox.getHitBox();
 }
 
-void Entity::updateCollision(sf::FloatRect aHitbox, sf::Vector2f aVelocity)
+void Entity::updateCollision(sf::FloatRect aHitbox, sf::Vector2f& aVelocity)
 {
 	hitbox.collision(aHitbox, aVelocity);
 }

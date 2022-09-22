@@ -22,10 +22,24 @@ Map::~Map()
 
 void Map::update(float dt)
 {
+	if (!enemies.empty())
+	{
+		for (int i = 0; i < enemies.size(); i++)
+		{
+			enemies.at(i)->update(dt);
+		}
+	}
 }
 
-void Map::updateEvents(sf::Event)
+void Map::updateEvents(sf::Event event)
 {
+	if (!enemies.empty())
+	{
+		for (int i = 0; i < enemies.size(); i++)
+		{
+			enemies.at(i)->updateEvents(event);
+		}
+	}
 }
 
 void Map::draw(sf::RenderWindow& window)

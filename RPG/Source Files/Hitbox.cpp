@@ -1,4 +1,5 @@
 #include "../Headers/Hitbox.h"
+#include <iostream>
 
 Hitbox::Hitbox(sf::FloatRect a)
 {
@@ -64,6 +65,9 @@ bool Hitbox::collision(sf::FloatRect a, sf::Vector2f& velocity)
 		colliding = true;
 	}
 
+	if (colliding)
+		std::cout << "E";
+
 	return colliding;
 }
 
@@ -74,8 +78,8 @@ void Hitbox::setPosition(sf::Vector2f position)
 
 void Hitbox::prediction(sf::Vector2f velocity)
 {
-	sf::Vector2f predict = sf::Vector2f(hitbox.getPosition().x + (velocity.x * 2), 
-										hitbox.getPosition().y + (velocity.y * 2));
+	sf::Vector2f predict = sf::Vector2f(hitbox.getPosition().x + (velocity.x * 3), 
+										hitbox.getPosition().y + (velocity.y * 3));
 
 	hitbox.setPosition(predict);
 }

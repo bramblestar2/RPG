@@ -10,10 +10,11 @@ public:
 	sf::FloatRect getGlobalBounds();
 	sf::FloatRect getHitbox();
 
-	virtual void updateCollision(sf::FloatRect hitbox, sf::Vector2f velocity);
+	virtual void updateCollision(sf::FloatRect hitbox, sf::Vector2f& velocity);
 	virtual void update(double dt);
 	virtual void updateEvents(sf::Event);
 	virtual void draw(sf::RenderWindow& window);
+
 private:
 	virtual void init();
 	virtual void updateHitbox();
