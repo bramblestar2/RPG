@@ -24,7 +24,9 @@ Player::~Player()
 
 void Player::updateCollision(sf::FloatRect aHitbox)
 {
-	hitbox.collision(aHitbox, velocity);
+	std::cout << aHitbox.left << " - " << aHitbox.top << "\r";
+	if (hitbox.collision(aHitbox, velocity))
+		std::cout << "A";
 }
 
 sf::FloatRect Player::getHitbox()

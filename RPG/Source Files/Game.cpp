@@ -49,7 +49,7 @@ void Game::update()
 		//views.follow(player.getGlobalBounds(), *window);
 		player.update(dt);
 		map.update(dt);
-		map.getPlayerInfo(player.getHitbox());
+		collisions();
 	}
 }
 
@@ -86,4 +86,10 @@ void Game::initWindow()
 								  info["Window"]["Height"]),
 								  title);
 	window->setFramerateLimit(info["Window"]["FPS"]);
+}
+
+void Game::collisions()
+{
+	map.getPlayerInfo(player.getHitbox());
+	
 }

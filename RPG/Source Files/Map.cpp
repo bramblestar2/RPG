@@ -22,6 +22,11 @@ Map::~Map()
 	}
 }
 
+std::vector<Enemy*> Map::returnEnemies()
+{
+	return enemies;
+}
+
 void Map::update(float dt)
 {
 	if (!enemies.empty())

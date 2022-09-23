@@ -9,6 +9,8 @@ public:
 	Map();
 	~Map();
 
+	std::vector<Enemy*> returnEnemies();
+
 	void update(float);
 	void updateEvents(sf::Event);
 	void draw(sf::RenderWindow& window);

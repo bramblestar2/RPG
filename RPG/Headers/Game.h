@@ -29,5 +29,7 @@ private:
 	Player player;
 	Map map;
 	Perspective views;
+
+	void collisions();
 };
 
