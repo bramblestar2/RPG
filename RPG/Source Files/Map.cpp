@@ -4,7 +4,7 @@
 
 Map::Map()
 {
-	enemies.push_back(new Enemy(500, 500));
+	enemies.push_back(new Enemy(500, 300));
 
 	init();
 }

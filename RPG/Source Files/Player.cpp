@@ -24,9 +24,15 @@ Player::~Player()
 
 void Player::updateCollision(sf::FloatRect aHitbox)
 {
-	std::cout << aHitbox.left << " - " << aHitbox.top << "\r";
-	if (hitbox.collision(aHitbox, velocity))
-		std::cout << "A";
+	//std::cout << aHitbox.left << " - " << aHitbox.top << "\r";
+	hitbox.collision(aHitbox, velocity);
+	sf::FloatRect intersection;
+	//if (sprite.getGlobalBounds().intersects(aHitbox, intersection))
+	{
+		//sprite.move(intersection.width, intersection.top);
+		//sprite.move(-intersection.width, -intersection.height);
+		//std::cout << intersection.width << " - " << intersection.height << std::endl;
+	}
 }
 
 sf::FloatRect Player::getHitbox()
@@ -51,9 +57,9 @@ void Player::setPosition(sf::Vector2f position)
 
 void Player::update(double dt)
 {
-	movement();
+	sprite.move(velocity.x * (dt * 100), velocity.y * (dt * 100));
 
-	sprite.move(velocity.x * (dt*100), velocity.y * (dt * 100));
+	movement();
 
 	hitbox.setFloatRect(sprite.getGlobalBounds());
 	hitbox.prediction(velocity);

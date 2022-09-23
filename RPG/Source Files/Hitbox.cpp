@@ -29,7 +29,6 @@ bool Hitbox::collision(sf::FloatRect& a, sf::Vector2f& velocity)
 
 	if (hitbox.getGlobalBounds().intersects(a))
 	{
-
 		//Bottom
 		if (hitbox.getGlobalBounds().top < a.top &&
 			hitbox.getGlobalBounds().top + hitbox.getGlobalBounds().height < a.top + a.height &&
@@ -37,6 +36,7 @@ bool Hitbox::collision(sf::FloatRect& a, sf::Vector2f& velocity)
 			hitbox.getGlobalBounds().left + hitbox.getGlobalBounds().width > a.left)
 		{
 			velocity.y = 0;
+			//std::cout << "Bottom / ";
 		}
 		//Top
 		else if (hitbox.getGlobalBounds().top > a.top &&
@@ -45,6 +45,7 @@ bool Hitbox::collision(sf::FloatRect& a, sf::Vector2f& velocity)
 			hitbox.getGlobalBounds().left + hitbox.getGlobalBounds().width > a.left)
 		{
 			velocity.y = 0;
+			//std::cout << "Top / ";
 		}
 
 		//Right
@@ -54,6 +55,7 @@ bool Hitbox::collision(sf::FloatRect& a, sf::Vector2f& velocity)
 			hitbox.getGlobalBounds().top + hitbox.getGlobalBounds().height > a.top)
 		{
 			velocity.x = 0;
+			//std::cout << "Right / ";
 		}
 		//Left
 		else if (hitbox.getGlobalBounds().left > a.left &&
@@ -62,7 +64,10 @@ bool Hitbox::collision(sf::FloatRect& a, sf::Vector2f& velocity)
 			hitbox.getGlobalBounds().top + hitbox.getGlobalBounds().height > a.top)
 		{
 			velocity.x = 0;
+			//std::cout << "Left";
 		}
+
+		//std::cout << std::endl;
 
 		colliding = true;
 	}
@@ -91,6 +96,9 @@ void Hitbox::showHitbox(sf::RenderWindow& window)
 
 void Hitbox::init()
 {
+	collideX = -1;
+	collideY = -1;
+
 	hitbox.setOutlineColor(sf::Color::Blue);
 	hitbox.setOutlineThickness(1);
 	hitbox.setFillColor(sf::Color::Transparent);

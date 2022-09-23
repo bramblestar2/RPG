@@ -9,7 +9,7 @@ Game::Game()
 {
 	views.followEntity(true);
 	views.addView();
-	views.transitionSpeed(0.5f);
+	views.transitionSpeed(0.1f);
 
 	initWindow();
 }
@@ -46,7 +46,7 @@ void Game::update()
 {
 	if (window->hasFocus())
 	{
-		//views.follow(player.getGlobalBounds(), *window);
+		views.follow(player.getGlobalBounds(), *window);
 		player.update(dt);
 		map.update(dt);
 		collisions();
@@ -92,4 +92,13 @@ void Game::collisions()
 {
 	map.getPlayerInfo(player.getHitbox());
 	
+	//Check if enemies empty
+	if (!map.returnEnemies().empty())
+	{
+		//If enemies isnt empty, go through the entire list
+		for (int i = 0; i < map.returnEnemies().size(); i++)
+		{
+			player.updateCollision(map.returnEnemies().at(i)->getHitbox());
+		}
+	}
 }

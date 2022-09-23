@@ -11,6 +11,7 @@ public:
 	sf::FloatRect getHitBox();
 
 	bool collision(sf::FloatRect&, sf::Vector2f& velocity);
+
 	void setFloatRect(sf::FloatRect);
 	//Get the position of the entity and 
 	//velocity from sprite for prediction
@@ -18,6 +19,8 @@ public:
 	void showHitbox(sf::RenderWindow& window);
 private:
 	sf::RectangleShape hitbox;
+
+	int collideX, collideY;
 
 	void init();
 };
