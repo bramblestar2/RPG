@@ -1,5 +1,6 @@
 #include "../Headers/Map.h"
 #include <iostream>
+#include "../Headers/Misc.h"
 
 Map::Map()
 {
@@ -16,6 +17,7 @@ Map::~Map()
 		{
 			delete enemies.at(i);
 		}
+		
 		enemies.clear();
 	}
 }
@@ -62,6 +64,7 @@ void Map::init()
 
 void Map::collisionDetection(sf::FloatRect playerHitbox, sf::Vector2f& playerVelocity)
 {
+	//Player and Enemy Collision Detection
 	if (!enemies.empty())
 	{
 		for (int i = 0; i < enemies.size(); i++)

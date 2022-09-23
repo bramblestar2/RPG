@@ -11,6 +11,7 @@ public:
 	//will be saved to saves.json
 	void saveInfo();
 
+	sf::FloatRect getHitbox();
 	sf::Vector2f& getVelocity();
 	sf::FloatRect getGlobalBounds();
 	void setPosition(sf::Vector2f);
@@ -34,6 +35,4 @@ private:
 
 	//The location of the sprites
 	std::string spriteFiles;
-
-
 };

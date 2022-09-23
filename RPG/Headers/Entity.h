@@ -7,8 +7,8 @@ public:
 	Entity();
 	~Entity();
 
-	sf::FloatRect getGlobalBounds();
-	sf::FloatRect getHitbox();
+	virtual sf::FloatRect getGlobalBounds();
+	virtual sf::FloatRect getHitbox();
 
 	virtual void updateCollision(sf::FloatRect hitbox, sf::Vector2f& velocity);
 	virtual void update(double dt);

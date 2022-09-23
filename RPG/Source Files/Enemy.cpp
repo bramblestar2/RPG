@@ -4,8 +4,8 @@
 Enemy::Enemy(int x, int y)
 {
 	init();
-	hitbox = Hitbox(sprite.getGlobalBounds());
 	sprite.setPosition(x, y);
+	hitbox = Hitbox(sprite.getGlobalBounds());
 }
 
 Enemy::Enemy()
@@ -17,9 +17,25 @@ Enemy::~Enemy()
 {
 }
 
+sf::FloatRect Enemy::getGlobalBounds()
+{
+	return sprite.getGlobalBounds();
+}
+
+sf::FloatRect Enemy::getHitbox()
+{
+	return hitbox.getHitBox();
+}
+
+void Enemy::updateCollision(sf::FloatRect aHitbox, sf::Vector2f& aVelocity)
+{
+	hitbox.collision(aHitbox, aVelocity);
+}
+
 void Enemy::update(double dt)
 {
-	hitbox.setPosition(sprite.getPosition());
+	
+	hitbox.setFloatRect(sprite.getGlobalBounds());
 	hitbox.prediction(velocity);
 }
 

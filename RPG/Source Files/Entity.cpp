@@ -17,7 +17,8 @@ sf::FloatRect Entity::getGlobalBounds()
 
 sf::FloatRect Entity::getHitbox()
 {
-	return hitbox.getHitBox();
+	return sf::FloatRect(100, 100, 100, 100);
+	//return hitbox.getHitBox();
 }
 
 void Entity::updateCollision(sf::FloatRect aHitbox, sf::Vector2f& aVelocity)
@@ -47,7 +48,7 @@ void Entity::init()
 
 void Entity::updateHitbox()
 {
-	hitbox.setPosition(sprite.getPosition());
+	hitbox.setFloatRect(sprite.getGlobalBounds());
 	hitbox.prediction(velocity);
 }
 

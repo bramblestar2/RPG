@@ -1,5 +1,6 @@
 #include "../Headers/Hitbox.h"
 #include <iostream>
+#include "../Headers/Misc.h"
 
 Hitbox::Hitbox(sf::FloatRect a)
 {
@@ -22,12 +23,13 @@ sf::FloatRect Hitbox::getHitBox()
 	return hitbox.getGlobalBounds();
 }
 
-bool Hitbox::collision(sf::FloatRect a, sf::Vector2f& velocity)
+bool Hitbox::collision(sf::FloatRect& a, sf::Vector2f& velocity)
 {
 	bool colliding = false;
 
 	if (hitbox.getGlobalBounds().intersects(a))
 	{
+
 		//Bottom
 		if (hitbox.getGlobalBounds().top < a.top &&
 			hitbox.getGlobalBounds().top + hitbox.getGlobalBounds().height < a.top + a.height &&
@@ -65,15 +67,13 @@ bool Hitbox::collision(sf::FloatRect a, sf::Vector2f& velocity)
 		colliding = true;
 	}
 
-	if (colliding)
-		std::cout << "E";
-
 	return colliding;
 }
 
-void Hitbox::setPosition(sf::Vector2f position)
+void Hitbox::setFloatRect(sf::FloatRect a)
 {
-	hitbox.setPosition(position);
+	hitbox.setSize(sf::Vector2f(a.width, a.height));
+	hitbox.setPosition(a.left, a.top);
 }
 
 void Hitbox::prediction(sf::Vector2f velocity)
@@ -91,7 +91,7 @@ void Hitbox::showHitbox(sf::RenderWindow& window)
 
 void Hitbox::init()
 {
-	hitbox.setOutlineColor(sf::Color::Red);
-	hitbox.setOutlineThickness(5);
+	hitbox.setOutlineColor(sf::Color::Blue);
+	hitbox.setOutlineThickness(1);
 	hitbox.setFillColor(sf::Color::Transparent);
 }

@@ -22,6 +22,5 @@ private:
 	//Handles all collision between entities
 	void collisionDetection(sf::FloatRect, sf::Vector2f&);
 	
-	
 	std::vector<Enemy*> enemies;
 };

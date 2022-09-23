@@ -22,6 +22,11 @@ Player::~Player()
 {
 }
 
+sf::FloatRect Player::getHitbox()
+{
+	return hitbox.getHitBox();
+}
+
 sf::Vector2f& Player::getVelocity()
 {
 	return velocity;
@@ -29,7 +34,7 @@ sf::Vector2f& Player::getVelocity()
 
 sf::FloatRect Player::getGlobalBounds()
 {
-	return sprite.getGlobalBounds();
+	return this->sprite.getGlobalBounds();
 }
 
 void Player::setPosition(sf::Vector2f position)
@@ -43,7 +48,7 @@ void Player::update(double dt)
 
 	sprite.move(velocity.x * (dt*100), velocity.y * (dt * 100));
 
-	hitbox.setPosition(sprite.getPosition());
+	hitbox.setFloatRect(sprite.getGlobalBounds());
 	hitbox.prediction(velocity);
 }
 

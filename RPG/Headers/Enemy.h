@@ -8,6 +8,11 @@ public:
 	Enemy();
 	~Enemy();
 
+	sf::FloatRect getGlobalBounds();
+	sf::FloatRect getHitbox();
+
+	void updateCollision(sf::FloatRect hitbox, sf::Vector2f& velocity);
+
 	virtual void update(double);
 	virtual void updateEvents(sf::Event);
 	virtual void draw(sf::RenderWindow& window);
