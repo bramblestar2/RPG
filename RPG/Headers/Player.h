@@ -11,6 +11,8 @@ public:
 	//will be saved to saves.json
 	void saveInfo();
 
+	void updateCollision(sf::FloatRect hitbox);
+
 	sf::FloatRect getHitbox();
 	sf::Vector2f& getVelocity();
 	sf::FloatRect getGlobalBounds();

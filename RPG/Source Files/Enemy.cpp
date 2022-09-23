@@ -27,9 +27,9 @@ sf::FloatRect Enemy::getHitbox()
 	return hitbox.getHitBox();
 }
 
-void Enemy::updateCollision(sf::FloatRect aHitbox, sf::Vector2f& aVelocity)
+void Enemy::updateCollision(sf::FloatRect aHitbox)
 {
-	hitbox.collision(aHitbox, aVelocity);
+	hitbox.collision(aHitbox, velocity);
 }
 
 void Enemy::update(double dt)

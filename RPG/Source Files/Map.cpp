@@ -53,23 +53,23 @@ void Map::draw(sf::RenderWindow& window)
 	}
 }
 
-void Map::getPlayerInfo(sf::FloatRect a, sf::Vector2f& b)
+void Map::getPlayerInfo(sf::FloatRect a)
 {
-	collisionDetection(a, b);
+	collisionDetection(a);
 }
 
 void Map::init()
 {
 }
 
-void Map::collisionDetection(sf::FloatRect playerHitbox, sf::Vector2f& playerVelocity)
+void Map::collisionDetection(sf::FloatRect playerHitbox)
 {
 	//Player and Enemy Collision Detection
 	if (!enemies.empty())
 	{
 		for (int i = 0; i < enemies.size(); i++)
 		{
-			enemies.at(i)->updateCollision(playerHitbox, playerVelocity);
+			enemies.at(i)->updateCollision(playerHitbox);
 		}
 	}
 }

@@ -22,6 +22,11 @@ Player::~Player()
 {
 }
 
+void Player::updateCollision(sf::FloatRect aHitbox)
+{
+	hitbox.collision(aHitbox, velocity);
+}
+
 sf::FloatRect Player::getHitbox()
 {
 	return hitbox.getHitBox();

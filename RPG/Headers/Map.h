@@ -13,14 +13,14 @@ public:
 	void updateEvents(sf::Event);
 	void draw(sf::RenderWindow& window);
 
-	void getPlayerInfo(sf::FloatRect hitbox, sf::Vector2f& velocity);
+	void getPlayerInfo(sf::FloatRect hitbox);
 
 private:
 	//Will gather all map information
 	void init();
 
 	//Handles all collision between entities
-	void collisionDetection(sf::FloatRect, sf::Vector2f&);
+	void collisionDetection(sf::FloatRect);
 	
 	std::vector<Enemy*> enemies;
 };

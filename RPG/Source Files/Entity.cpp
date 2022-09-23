@@ -17,13 +17,12 @@ sf::FloatRect Entity::getGlobalBounds()
 
 sf::FloatRect Entity::getHitbox()
 {
-	return sf::FloatRect(100, 100, 100, 100);
-	//return hitbox.getHitBox();
+	return hitbox.getHitBox();
 }
 
-void Entity::updateCollision(sf::FloatRect aHitbox, sf::Vector2f& aVelocity)
+void Entity::updateCollision(sf::FloatRect aHitbox)
 {
-	hitbox.collision(aHitbox, aVelocity);
+	hitbox.collision(aHitbox, velocity);
 }
 
 void Entity::update(double dt)
