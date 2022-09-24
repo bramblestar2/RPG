@@ -83,8 +83,8 @@ void Hitbox::setFloatRect(sf::FloatRect a)
 
 void Hitbox::prediction(sf::Vector2f velocity)
 {
-	sf::Vector2f predict = sf::Vector2f(hitbox.getPosition().x + (velocity.x * 3), 
-										hitbox.getPosition().y + (velocity.y * 3));
+	sf::Vector2f predict = sf::Vector2f(hitbox.getPosition().x + (velocity.x * 2), 
+										hitbox.getPosition().y + (velocity.y * 2));
 
 	hitbox.setPosition(predict);
 }

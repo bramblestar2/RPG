@@ -24,15 +24,7 @@ Player::~Player()
 
 void Player::updateCollision(sf::FloatRect aHitbox)
 {
-	//std::cout << aHitbox.left << " - " << aHitbox.top << "\r";
 	hitbox.collision(aHitbox, velocity);
-	sf::FloatRect intersection;
-	//if (sprite.getGlobalBounds().intersects(aHitbox, intersection))
-	{
-		//sprite.move(intersection.width, intersection.top);
-		//sprite.move(-intersection.width, -intersection.height);
-		//std::cout << intersection.width << " - " << intersection.height << std::endl;
-	}
 }
 
 sf::FloatRect Player::getHitbox()
